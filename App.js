@@ -77,6 +77,7 @@ export default function App() {
         placeholder="Amount"
       />
       <Button title="Save" onPress={addProduct} />
+      <Text style={styles.header}>Shopping list</Text>
       <FlatList
         data={products}
         renderItem={({ item }) => (
@@ -107,9 +108,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   input: {
-    width: "100%",
+    margin: 5,
+    padding: 2,
+    width: "90%",
     borderColor: "grey",
     borderWidth: 1,
+  },
+  header: {
+    marginTop: 10,
+    fontWeight: "bold",
+    color: "blue",
   },
   listitems: {
     flexDirection: "row",
